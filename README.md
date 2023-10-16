@@ -113,11 +113,11 @@ It is called supervised learning because the process of an algorithm learning fr
 
 Supervised learning problems can be further grouped into regression and classification problems.
 
-**Classification**. In classification problems, the output space is a set of _C_ unordered and mutually exclusive labels known as **classes** , $$_Y = {1, 2, . . . , C}$$._ The problem of predicting the class label given an input is also called **pattern recognition**. (If there are just two classes, often denoted by $$_y_ _\in_ _\{0,1\}$$_ or $$_y_ _\in_ _\{−1, +1\}$$,_ it is called _binary classification_.) A classification problem with several classes (greater than 2) is called _multiclass._ Also, there are a variety of multilabel problems.
+**Classification**. In classification problems, the output space is a set of _C_ unordered and mutually exclusive labels known as **classes** , $$Y = {1,2,...,C}$$. The problem of predicting the class label given an input is also called **pattern recognition**. (If there are just two classes, often denoted by $$y\in\{0,1\}$$ or $$y\in\{−1, +1\}$$, it is called _binary classification_.) A classification problem with several classes (greater than 2) is called _multiclass._ Also, there are a variety of multilabel problems.
 
 For example, we use _binary classification_ to answer the question_:_ has the patient a heart disease? _Multiclass classification_ is used in cases when each sample is assigned to one and only one label: a fruit can be either an apple or a pear or a banana but not both at the same time.
 
-**Regression**. Suppose that we want to predict a real-valued quantity _y_ _∈_ _R_ instead of a class label $$_y_ _\in_ _\{1,...,C\}$$;_ this is known as regression. See the example of housing price prediction above.
+**Regression**. Suppose that we want to predict a real-valued quantity $$y ∈ R$$  instead of a class label $$y \in\{1,...,C\}$$; this is known as regression. See the example of housing price prediction above.
 
 Think about what cases from the table above could also be formulated as a classification and regression task. Provide an answer inside the project notebook.
 
