@@ -115,7 +115,7 @@ Supervised learning problems can be further grouped into regression and classifi
 
 **Classification**. In classification problems, the output space is a set of _C_ unordered and mutually exclusive labels known as **classes** , $$Y = {1,2,...,C}$$. The problem of predicting the class label given an input is also called **pattern recognition**. (If there are just two classes, often denoted by $$y\in\{0,1\}$$ or $$y\in\{−1, +1\}$$, it is called _binary classification_.) A classification problem with several classes (greater than 2) is called _multiclass._ Also, there are a variety of multilabel problems.
 
-For example, we use _binary classification_ to answer the question_:_ has the patient a heart disease? _Multiclass classification_ is used in cases when each sample is assigned to one and only one label: a fruit can be either an apple or a pear or a banana but not both at the same time.
+For example, we use _binary classification_ to answer the question: has the patient a heart disease? _Multiclass classification_ is used in cases when each sample is assigned to one and only one label: a fruit can be either an apple or a pear or a banana but not both at the same time.
 
 **Regression**. Suppose that we want to predict a real-valued quantity $$y ∈ R$$  instead of a class label $$y \in\{1,...,C\}$$; this is known as regression. See the example of housing price prediction above.
 
