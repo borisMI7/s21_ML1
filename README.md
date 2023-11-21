@@ -243,9 +243,7 @@ Save your code in python JupyterNotebook. Your peer will load it and compare wit
 Your code should contain the answers to all mandatory questions. Task ‘additional’ is on your own. 
 
 
-💡 [Tap here](https://forms.yandex.ru/cloud/646b43a8eb61462a4d084f0a/) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
-
-
+>Please leave feedback on the project in the [feedback form.](https://forms.yandex.ru/cloud/646b43a8eb61462a4d084f0a/) 
 
 
 
