@@ -206,7 +206,7 @@ Follow instructions, answer questions and get your final score!
       2. Use a scatter plot to visualize correlation between features and target. You should return 3 plots, where X axis it target, and Y axis is a feature.
 4. Generate features
    1. This step is very wide. You may create all features you want. For example, you may add 3 new features, which are squared: 'bathrooms_squared’, 'bedrooms_squared’, ‘'interest_level_squared'. Plot a correlation matrix with new features. Are new features more correlated with target then basic features? 
-   2. To train model here we will not use your new features. Remember this example and use it in Lecture 2. 
+   2. To train model here we will not use your new features. Remember this example and use it in Lecture 2. To train the model, we will only consider 'bathrooms' and 'bedrooms' features.
    3. Read this sklearn info about PolynomialFeatures: https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html
    4. To use PolynomialFeatures we first need to split data to train and test samples. We already made it for you, please read the train and test data. 
    5. Initialize PolynomialFeatures() with the degree of 10. 
