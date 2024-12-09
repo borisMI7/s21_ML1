@@ -1,6 +1,6 @@
 # Machine learning introduction
 
-Summary: This project is about introduction into machine learning and particularly about primary data analysis with some practical basics.
+Summary: This project is an introduction to machine learning and especially to primary data analysis with some practical basics.
 
 💡 [Tap here](https://new.oprosso.net/p/4cb31ec3f47a4596bc758ea1861fb624) **to leave your feedback on the project**. It's anonymous and will help our team make your educational experience better. We recommend completing the survey immediately after the project.
 
@@ -19,17 +19,17 @@ Summary: This project is about introduction into machine learning and particular
 
 ## Chapter I. Preamble
 
-“With the ever-increasing amounts of data in electronic form, the need for automated methods for data analysis continues to grow. The goal of machine learning is to develop methods that can automatically detect patterns in data, and then to use the uncovered patterns to predict future data or other outcomes of interest” -  we start our course from definition of machine learning from one of widely known book - “Machine Learning A Probabilistic Perspective” by Kevin P. Murphy. 
+"With the ever-increasing amount of data in electronic form, the need for automated methods of data analysis continues to grow. The goal of machine learning is to develop methods that can automatically detect patterns in data, and then use the discovered patterns to predict future data or other outcomes of interest" — we start our course with the definition of machine learning from one of the widely known books — "Machine Learning A Probabilistic Perspective" by Kevin P. Murphy. 
 
-There are a lot of problems that are solved with ML methods:
-* The problem of housing price prediction. We are trying to define a cost of an object with set of features such as quality of repair, footage and area
+There are a lot of problems solved by ML methods:
+* The problem of predicting housing prices. We try to define a cost of an object with a set of features such as quality of repair, footage and area.
 * What disease does the patient have if we observe a certain set of symptoms?
-* Will the client of the bank return the loan if his income is X and he has a good credit history?
-* What products are suitable to show for users on the main page of the online store to speed up his/her successful search?
+* Will the customer of the bank pay back the loan if his income is X and he has a good credit history?
+* What products are suitable to show to the user on the main page of the online store to speed up his/her successful search?
 
-In most cases we can answer all these questions. But it is much better to have a machine that can do this work without prejudice and do it many times faster. Data calls for automated methods of analysis, which is what machine learning provides. We define machine learning as a set of methods that can automatically detect patterns in data, and then use the uncovered patterns to predict future data.
+In most cases we can answer all these questions. But it is much better to have a machine that can do this work without bias and many times faster. Data requires automated methods of analysis, which is what machine learning provides. We define machine learning as a set of methods that can automatically discover patterns in data and then use the discovered patterns to predict future data.
 
-To sum up, this course will show you what Machine Learning is. After reading all the materials and practicing labs, you will master all the basic approaches of building models and learn how to predict the future.
+In summary, this course will show you what machine learning is. After reading all the materials and doing the labs, you will master all the basic approaches to building models and learning how to predict the future.
 
 ## Chapter II. Introduction
 
@@ -37,55 +37,31 @@ To sum up, this course will show you what Machine Learning is. After reading all
 
 ![day_1_scheme](misc/images/scheme.png)
 
-Suppose you are a very clever house seller. You know everything about the real estate market 
-(*data* and *features*) and understand how the price depends on various factors (*algorithm*). 
-For example, you know that the more bedrooms an apartment has, the more expensive it is. 
-But how can one make a machine learn such dependencies? And how to understand who predicts better, 
-the very clever house seller or the machine? 
+Suppose you are a very smart home seller. You know all about the real estate market (*data* and *features*) and understand how the price depends on various factors (*algorithm*). For example, you know that the more bedrooms an apartment has, the more expensive it is. But how do you get a machine to learn such dependencies? And how to understand who predicts better, the very smart real estate agent or the machine? 
 
-For the first, you split the houses into two groups: **train** and **test** data. 
-The first one is used to determine relations between features and price. 
-The second one predicts the price for new houses, which are not in the first group. 
-Thus, **building a model** is a sequence of methods you use to prepare and analyze data, find relations, 
-and then predict new prices. 
+First, you divide the houses into two groups: **train** and **test** data. The first is used to determine the relationship between features and price. The second predicts the price for new houses that are not in the first group. Thus, **building a model** is a sequence of methods you use to prepare and analyze data, find relations, and then predict new prices. 
 
-The first step of capturing patterns from *train* data is called **fitting** or **training** the model. 
-The data used to fit the model is called the **training data**. 
-All the characteristics on which you base your decision are called **features**. 
-For example, the number of Bedrooms or Bathrooms are features. And price is the **target**. 
-Your simple algorithm in the case above may be as follows: 
-“If a house has more than 2 Bedrooms then its price is $188000, else price is $178000”.
+The first step of capturing patterns from *train* data is called **fitting** or **training** the model. The data used to fit the model is called the **training data**. All the characteristics that you base your decision on are called **features**. For example, the number of bedrooms or bathrooms are features. And the price is the **target**. Your simple algorithm in the above case might be: "If a house has more than 2 bedrooms, then its price is $188000, otherwise its price is $178000".
 
-The details of how the model is *fitted* are complex enough and we will discuss it later. 
-After the model has been fit, you can apply it to new or **test** data to **predict** prices of new houses. 
-This will allow you to understand how good the model performs on unseen data, 
-i.e. evaluate our model's performance. In most (though not all) applications, the relevant measure of model 
-quality is predictive accuracy. In other words, will the model's predictions be close to what actually happens. 
-There will be more theory about metrics later.
+The details of how to *fit* the model are complex enough, and we will discuss them later. After fitting the model, you can apply it to new or **test** data to **predict** prices of new homes. This will allow you to understand how well the model performs on unseen data, i.e., evaluate the performance of our model. In most (though not all) applications, the relevant measure of model quality is predictive accuracy. In other words, are the model's predictions close to what actually happens? There will be more theory on metrics later.
 
 Therefore, we follow the next steps to build ML model:
-1. Collect training data
-2. Get features and target
-3. Train (fit) model
-4. Get predictions on new features from unseen part of dataset (test data)
-5. Evaluate quality of the model
+1. Collect training data;
+2. Get features and target;
+3. Train (fit) model;
+4. Get predictions on new features from unseen part of data (test data);
+5. Evaluate the quality of the model.
 
-### ML algorithms
+### ML Algorithms
 
-Now let’s talk about classification of algorithms. 
-But first, we’ll give you a Tom Mitchell’s definition of machine learning:
+Now let's talk about classifying algorithms. 
+But first, let's look at Tom Mitchell's definition of machine learning:
 
-*A computer program is said to learn from experience E with respect to some class of tasks T, 
-and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.*
+*A computer program is said to learn from experience E with respect to some class of tasks T, and a performance measure P, if its performance on tasks in T, as measured by P, improves with experience E.*
 
-This definition is close to children’s *experience E* in school. 
-From time to time the set of children learns and then repeats a multiplication table (*task T*) 
-and gets grades (*performance measure P*) for knowledge. 
-The more times children repeat a multiplication table, the more improved their knowledge becomes and better grades they achieve.
+This definition is close to the *experience E* of children in school. From time to time, the set of children learns and then repeats a multiplication table (*task T*) and receive marks (*performance measure P*) for their knowledge. The more times children repeat a multiplication table, the better their knowledge becomes and the better grades they get.
 
-Thus, there are many kinds of machine learning, depending on the nature of the tasks T we wish the system to learn, 
-the nature of the performance measure P we use to evaluate the system, and the nature of the training signal or experience 
-E we give it. There is a great variety of ML methods. Let’s provide some examples.
+Thus, there are many types of machine learning, depending on the type of the tasks T we want the system to learn, the type of performance measure P we use to evaluate the system, and the type of training signal or experience E we give it. There is a wide variety of ML methods. Let's give some examples.
 
 |  | Task T | Performance measure P | Experience E |
 | ----- | ------ | ------ | ----- |
@@ -100,149 +76,126 @@ E we give it. There is a great variety of ML methods. Let’s provide some examp
 | 9 | Split customers of a store into segments to understand differences of their behavior | How well you can interpret splits | Customers’ characteristics and purchase history |
 | 10 | Detect anomaly in site traffic | The amount of prevented DDoS attacks | Stream of requests to your servers |
 
-And these examples could be easily expanded with much more tasks. 
-Furthermore, we can slightly change the incoming conditions of the task and it can require completely another solution. 
-For instance, imagine if we need to conduct the promotion in the 5th example for absolutely new products from a new brand that do not have any history of purchases. 
-Usually when a scientific field has a large variety in the tasks it tries to solve, 
-then some classification is used to make it easier to navigate the tasks within. ML is no exception. 
-The most important classification is into **supervised learning** and **unsupervised learning**.
+And these examples could easily be extended with many more tasks. Furthermore, we can slightly change the incoming conditions of the task and it may require a completely different solution. 
 
-#### Supervised learning 
+For example, imagine that in the 5th example we have to do the promotion for absolutely new products of a new brand, which have no purchase history. Usually when a scientific field has a large variety in the tasks it tries to solve, then some classification is used to make it easier to navigate the tasks within it. ML is no exception. The main classification is into **supervised learning** and **unsupervised learning**.
 
-Supervised learning is when you have some input variables (X) and an output variable (y) and you use an algorithm to learn the mapping function from the input to the output. The problem of housing price prediction is an example of supervised learning. 
+#### Supervised Learning 
 
-It is called supervised learning because the process of an algorithm learning from the training dataset can be thought of as a teacher supervising the learning process. We know the correct answers, the algorithm iteratively makes predictions on the training data and is corrected by the teacher. Learning stops when the algorithm achieves an acceptable level of performance.
+Supervised learning is when you have some input variables (X) and an output variable (y) and you use an algorithm to learn the mapping function from the input to the output. The problem of predicting house prices is an example of supervised learning. 
 
-Supervised learning problems can be further grouped into regression and classification problems.
+It is called supervised learning because the process of an algorithm learning from the training dataset can be thought of as a teacher supervising the learning process. We know the correct answers, the algorithm iteratively makes predictions on the training data, and is corrected by the teacher. Learning stops when the algorithm reaches an acceptable level of performance.
 
-**Classification**. In classification problems, the output space is a set of _C_ unordered and mutually exclusive labels known as **classes** , $$Y = {1,2,...,C}$$. The problem of predicting the class label given an input is also called **pattern recognition**. (If there are just two classes, often denoted by $$y\in\{0,1\}$$ or $$y\in\{−1, +1\}$$, it is called _binary classification_.) A classification problem with several classes (greater than 2) is called _multiclass._ Also, there are a variety of multilabel problems.
+Supervised learning problems can be further divided into regression and classification problems.
 
-For example, we use _binary classification_ to answer the question: has the patient a heart disease? _Multiclass classification_ is used in cases when each sample is assigned to one and only one label: a fruit can be either an apple or a pear or a banana but not both at the same time.
+**Classification**. In classification problems, the output space is a set of _C_ unordered and mutually exclusive labels known as **classes**, $$Y = {1,2,...,C}$$. The problem of predicting the class label given an input is also called **pattern recognition**. (If there are just two classes, often denoted by $$y\in\{0,1\}$$ or $$y\in\{−1, +1\}$$, it is called _binary classification_.) A classification problem with multiple classes (greater than 2) is called _multiclass._ There are also a variety of multilabel problems.
 
-**Regression**. Suppose that we want to predict a real-valued quantity $$y ∈ R$$  instead of a class label $$y \in\{1,...,C\}$$; this is known as regression. See the example of housing price prediction above.
+For example, we use _binary classification_ to answer the question: does the patient have heart disease? _Multiclass classification_ is used in cases where each sample is assigned to one and only one label: a fruit can be either an apple or a pear or a banana, but not both at the same time.
 
-Think about what cases from the table above could also be formulated as a classification and regression task. Provide an answer inside the project notebook.
+**Regression**. Suppose we want to predict a real-valued quantity $$y ∈ R$$ instead of a class label $$y \in\{1,...,C\}$$; this is known as regression. See the house price prediction example above.
 
-Unsupervised learning
+Think about which cases from the table above could also be formulated as a classification and regression task. Provide an answer in the project notebook.
 
-In supervised learning we assume that each input example _x_ in the training set has an associated set of output targets _y_, and our goal is to learn the input-output mapping.
+#### Unsupervised Learning
 
-A much more interesting task is to try to "make sense of" data, as opposed to just learning a mapping. That is, we just get observed **inputs** $$D = \{x_i:i \in \{1, \dots, N\}$$ without any corresponding **output** $$y\_i **$$**. This is called unsupervised learning. In other words, Unsupervised learning is when you only have input data ($$X$$) and no corresponding output variables.
+In supervised learning, we assume that each input example _x_ in the training set has an associated set of output targets _y_, and our goal is to learn the input-output mapping.
 
-#### Unsupervised learning
+A much more interesting task is to try to "make sense" of the data, as opposed to just learning a mapping. That is, we just get observed **inputs** $$D = \{x_i:i \in \{1, \dots, N\}$$ without any corresponding **outputs** $$y\_i **$$**. This is called unsupervised learning. In other words, unsupervised learning is when you have only input data (X) and no corresponding output variables.
 
-In supervised learning we assume that each input example x in the training set has an associated set of output targets y, 
-and our goal is to learn the input-output mapping.
-
-A much more interesting task is to try to “make sense of” data, as opposed to just learning a mapping. 
-That is, we just get observed **inputs** *D = {xn: n {1, ..., N}}* without any corresponding **output** *yn*. 
-This is called unsupervised learning. In other words, 
-Unsupervised learning is when you only have input data (X) and no corresponding output variables.
-
-Unsupervised learning problems can be further grouped into **clustering**, **association** and **dimensionality reduction** problems.
+Unsupervised learning problems can be further classified into **clustering**, **association**, and **dimensionality reduction** problems.
 
 **Clustering**: A clustering problem is where you want to discover the inherent groupings in the data, such as grouping customers by purchasing behavior. 
 
-**Association**: An association rule learning problem is where you want to discover rules that describe large portions of your data, such as people that buy A also tend to buy B.
+**Association**: An association rule learning problem is where you want to discover rules that describe large portions of your data, such as people who buy A also tend to buy B.
 
-**Dimensionality reduction (or generalization)**: 
-The aim of dimensionality reduction is to detect some common properties in our dataset and at the same time understand which features differ a lot. 
-When we have too many features we can use such information to compress features to smaller amounts and not to lose crucial information inside. 
-This trick is very useful when we need to visualize our dataset that have many features inside.
+**Dimensionality reduction (or generalization)**: The goal of dimensionality reduction is to discover some common properties in our dataset while understanding which features are very different. If we have too many features, we can use this information to compress the features into smaller sets without losing the important information in them. This trick is very useful when we need to visualize our dataset that has many features in it.
 
-Think about what cases from the table above could be formulated as a clustering, association and dimensionality reduction task. 
-Provide an answer inside the project solution. 
-Please note that the boundary between unsupervised learning classes is not so clear in practice and all these tasks sometimes combine together. 
-So feel free to share your opinion on how you can use these methods.
+Think about which cases from the table above could be formulated as a clustering, association, and dimensionality reduction task. Provide an answer in the project solution. Please note that the boundary between unsupervised learning classes is not so clear in practice, and sometimes all these tasks are combined. So feel free to share your opinion on how you can use these methods.
 
-Thus, you know the basics of ML theory. The next step is practice.
+Now you know the basics of ML theory. The next step is the practice.
 
 ## Chapter III. Goal
 
-The goal of this project is to provide you with the basic understanding of how to build the simplest models. 
-We will use the most popular methods of data analysis and processing, learn some methods of visualization. 
-The result is an easy regression model to predict how popular an apartment rental listing is based on the 
-listing content like text description, photos, number of bedrooms, price, etc.
+The goal of this project is to give you a basic understanding of how to build the simplest models. We will use the most common methods of data analysis and processing, learn some methods of visualization. The result is a simple regression model to predict the popularity of an apartment rental listing based on listing content such as text description, photos, number of bedrooms, price, etc.
 
 ## Chapter IV. Instructions
 
-* This project will only be evaluated by humans. You are free to organize and name your files as you desire. 
-* We recommend you push your local code into the Develop branch.
-* Here and further, we use Python 3 as the only correct version of Python and recommend you to use JupyterNotebook.
-* There are no strict rules for coding in this project. Nevertheless, you are asked to be clear and structured in the conception of your source code.
-* Please observe the code culture: store data in the ‘data’ folder, move imports and functions to the beginning of the notebook, make plot captions, leave comments and make your code clear.
+* This project will be judged by humans only. You are free to organize and name your files as you wish. 
+* We recommend that you push your local code to the develop branch.
+* Here and throughout, we use Python 3 as the only correct version of Python, and recommend that you use JupyterNotebook.
+* There are no strict rules for coding in this project. However, you are asked to be clear and structured in the conception of your code.
+* Please respect the code culture: store data in the `data` folder, move imports and functions to the top of the notebook, add plot labels, leave comments, and make your code clear.
 
 ## Chapter V. Task
 
-We will practice with a problem from Kaggle.com. Guiding instructions, you will predict the price of an apartment rental listing based on the listing content like text description, photos, number of bedrooms, price, etc. The data comes from renthop.com, an apartment listing website. 
+We will practice using a problem from Kaggle.com. You will predict the price of an apartment rental listing based on the listing content such as text description, photos, number of bedrooms, price, etc. The data comes from renthop.com, an apartment listing website. 
 
-Follow instructions, answer questions and get your final score!
+Follow the instructions, answer the questions and get your final score!
 
-1. Introduction. Write your answers in the *Intro* part of your Notebook 
-   1. To get started, please write 5 examples of ML methods application in life. What is the benefit of using machine learning methods in each of your examples? 
-   2. Use classification of tasks in the introduction to decide what class you can assign for the tasks from the table above and for the 5 examples you provided. 
-   3. Please think and suppose, what is the difference between multiclass and multilabel.
-   4. Is an example case with housing prices from theory a classification of a regression problem? Is it possible to reduce the regression problem to classification?
-2. Intro data analysis
-   1. Import libraries **pandas**, **numpy**, **sklearn**, **lightgbm**, **scipy**, **statsmodels**, **matplotlib**, **seaborn**. Use **pip install** if it’s necessary
-   2. Load data from [kaggle](https://www.kaggle.com/competitions/two-sigma-connect-rental-listing-inquiries/data) with **pandas**. You are need only table data and **train.json**
+1. Introduction. Write your answers in the *Intro* section of your notebook. 
+   1. To get started, please write 5 examples of the application of ML methods in life. What is the benefit of using machine learning methods in each of your examples? 
+   2. Use the classification of tasks in the introduction to decide which class you can assign to the tasks from the table above and to the 5 examples you provided. 
+   3. Think about what the difference is between multiclass and multilabel.
+   4. Is an example case with house prices from the theory a classification of a regression problem? Is it possible to reduce the regression problem to classification?
+2. Introduction to Data Analysis
+   1. Import the libraries **pandas**, **numpy**, **sklearn**, **lightgbm**, **scipy**, **statsmodels**, **matplotlib**, **seaborn**. Use **pip install** if necessary.
+   2. Load data from [kaggle](https://www.kaggle.com/competitions/two-sigma-connect-rental-listing-inquiries/data) using **pandas**. You only need table data and **train.json**.
    3. What is the size of your data? 
    4. Print the list of columns. Which column is a target? 
-   5. Make a fast analysis of the data: use methods **info()**, **describe()**, **corr()**. Explain the results of outputs. Are there any empty columns? 
-   6. We’ll work only with 3 features: 'bathrooms',  'bedrooms', 'interest_level' and with target column ‘price’. Make a dataframe with these columns only.
-3. Statistical data analysis
-   1. To start with statistical data analysis we recommend you refresh basic knowledge of statistics, such as Mean / Median / Mode / Variance / Standard Deviation. Also you are welcome to be free with distributions (Discrete uniform Distribution, Bernoulli Distribution, Binomial Distribution, Poisson Distribution, Normal Distribution, Exponential Distribution). Please make sure that you know the definitions of outliers, percentiles, confidential intervals. The article will be later 
-   2. Make a quick sense with [this article](https://towardsdatascience.com/how-to-compare-two-or-more-distributions-9b06ee4d30bf). Please take attention to such aspects as distributions and histograms, boxplot, outliers, kernel density function.
+   5. Make a quick analysis of the data: use the methods **info()**, **describe()**, **corr()**. Explain the results of the outputs. Are there any empty columns? 
+   6. We'll work with only 3 features: 'bathrooms', 'bedrooms', 'interest_level' and with the target column 'price'. Create a dataframe with only these columns.
+3. Statistical Data Analysis
+   1. To get started with statistical data analysis, we recommend that you refresh your basic knowledge of statistics, such as Mean / Median / Mode / Variance / Standard Deviation. Also you are welcome to be free with distributions (Discrete uniform Distribution, Bernoulli Distribution, Binomial Distribution, Poisson Distribution, Normal Distribution, Exponential Distribution). Please make sure that you know the definitions of outliers, percentiles, confidential intervals. The article will be presented later. 
+   2. Have a quick look at [this article](https://towardsdatascience.com/how-to-compare-two-or-more-distributions-9b06ee4d30bf). Please pay attention to such aspects as distributions and histograms, boxplots, outliers, kernel density function.
    3. Target analysis
       1. Plot a histogram to understand the distribution of the target. Is it all clear? 
-      2. The next step is boxplot(). What can you say about target? Are there any outliers? 
-      3. Drop rows which are out of the 1 and 99 percentile by the target column. 
-      4. Plot a histogram for price again. Explain the result.
-   4. Features analysis
+      2. The next step is boxplot(). What can you say about the target? Are there any outliers? 
+      3. Drop the rows that are outside the 1 and 99 percentiles from the target column. 
+      4. Plot another histogram for price. Explain the result.
+   4. Characteristics Analysis
       1. What is the type of column 'interest_level'? 
-      2. Print the values of this column. How many items each value contains? 
-      3. Decode these values. For example, you may replace each value to 0, 1 or 2.
-      4. Plot histograms for features 'bathrooms',  'bedrooms'. Are there outliers?
+      2. Print the values in this column. How many entries does each value contain? 
+      3. Decode these values. For example, you can replace each value with 0, 1, or 2.
+      4. Plot histograms for the features 'bathrooms', 'bedrooms'. Are there any outliers?
    5. Complex analysis
-      1. Plot a correlation matrix to understand correlation between features and target. Plot a heatmap plot for correlation matrix. Is there a correlation? 
-      2. Use a scatter plot to visualize correlation between features and target. You should return 3 plots, where X axis it target, and Y axis is a feature.
-4. Generate features
-   1. This step is very wide. You may create all features you want. For example, you may add 3 new features, which are squared: 'bathrooms_squared’, 'bedrooms_squared’, ‘'interest_level_squared'. Plot a correlation matrix with new features. Are new features more correlated with target then basic features? 
-   2. To train model here we will not use your new features. Remember this example and use it in Lecture 2. To train the model, we will only consider 'bathrooms' and 'bedrooms' features.
-   3. Read this sklearn info about PolynomialFeatures: https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html
-   4. To use PolynomialFeatures we first need to split data to train and test samples. We already made it for you, please read the train and test data. 
-   5. Initialize PolynomialFeatures() with the degree of 10. 
-   6. Apply PolynomialFeatures() to fit and transform your train and test data.
-5. Now you need to train 3 models: linear regression, decision tree and native model. We will use it as black boxes without deep understanding. 
-   1. Result table. 
-      1. Create two empty pandas DataFrames with columns ‘model’, ‘train’, ‘test’. Let’s the first be called result_MAE, and the second result_RMSE. We will fill these tables with results of models.
+      1. Plot a correlation matrix to understand the correlation between features and target. Plot a heat map for the correlation matrix. Is there a correlation? 
+      2. Plot a scatterplot to visualize the correlation between the features and the target. You should return 3 plots where the X-axis is the target and the Y-axis is a feature.
+4. Creating Features
+   1. This step is very broad. You can create as many features as you want. For example, you can add 3 new features that are squared: 'bathrooms_squared', 'bedrooms_squared', ''interest_level_squared'. Plot a correlation matrix with the new features. Are the new features more correlated with the target than the basic features? 
+   2. To train the model here, we will not use your new features. Remember this example and use it in Lecture 2. To train the model, we will only consider the features 'bathrooms' and 'bedrooms'.
+   3. Read this [Sklearn info about PolynomialFeatures](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html).
+   4. To use PolynomialFeatures, we first need to split the data into training and test samples. We have already done this for you, please read the training and test data. 
+   5. Initialize PolynomialFeatures() with a degree of 10. 
+   6. Apply PolynomialFeatures() to fit and transform your training and test data.
+5. Now you need to train 3 models: linear regression, decision tree and native model. We will use them as black boxes without deep understanding. 
+   1. Results table 
+      1. Create two empty Pandas DataFrames with columns 'model', 'train', 'test'. Let's call the first one result_MAE and the second one result_RMSE. We will fill these tables with the results of the models.
    2. Linear Regression 
-      1. Initialize linear regression from **sklearn** without parameters. 
-      2. Fit your model and make predict on train and test features. Save it as new columns in data 
-      3. Calculate MAE (Mean Absolute Error) on train and test targets 
-      4. Calculate RMSE (Root Mean Square Error) on train and test targets 
-      5. Insert your metrics into tables *result_MAE* and *result_RMSE* with model name ‘linear_regression’
+      1. Initialize linear regression from **sklearn** with no parameters. 
+      2. Fit your model and make predictions on training and test features. Save it as new columns in data.
+      3. Compute MAE (Mean Absolute Error) on training and test targets.
+      4. Calculate RMSE (Root Mean Square Error) on training and test objectives.
+      5. Insert your metrics into tables *result_MAE* and *result_RMSE* with model name 'linear_regression'.
    3. Decision Tree
-      1. Initialize decision tree regressor from sklearn with fixed random_state=42 
-      2. Fit it on train features and train targe and make predict on train and test features. Save it as new column in data 
-      3. Calculate MAE (Mean Absolute Error) on train and test targets 
-      4. Calculate RMSE (Root Mean Square Error) on train and test targets 
-      5. Insert your metrics into tables *result_MAE* and *result_RMSE* with model name ‘decision_tree’
-   4. Native models
-      1. Calculate mean and median of ‘price’ on train and test data and create a columns with these values 
-      2. Calculate MAE on train and test targets between your target and calculated mean and median values 
-      3. Calculate RMSE on train and test targets between your target and calculated mean and median values 
-      4. Insert your metrics into tables result_MAE and result_RMSE with model names ‘native_mean’ and ‘native_median’
-   5. Compare results 
-      1. Print your final tables result_MAE and result_RMSE. 
-      2. What is the best model?
+      1. Initialize decision tree regressor from sklearn with fixed random_state=42.
+      2. Fit it to train features and train target and make prediction on train and test features. Save it as a new column in data. 
+      3. Compute MAE (Mean Absolute Error) on train and test targets.
+      4. Compute RMSE (Root Mean Square Error) on train and test targets.
+      5. Insert your metrics into tables *result_MAE* and *result_RMSE* with model name 'decision_tree'.
+   4. Native Models
+      1. Calculate the mean and median of 'price' on the training and test data and create a column with these values. 
+      2. Calculate the MAE on the training and test targets between your target and the calculated mean and median. 
+      3. Calculate the RMSE on the training and test targets between your target and the calculated mean and median. 
+      4. Insert your metrics into tables result_MAE and result_RMSE with model names 'native_mean' and 'native_median'.
+   5. Compare the results 
+      1. Print your final result_MAE and result_RMSE tables. 
+      2. Which is the best model?
    6. Additional
-      1. You may practice with all data in your start dataset. Use and generate all features you want
+      1. You can practice with all the data in your starting dataset. Use and generate all the features you want.
 
 ### Submission
 
-Save your code in python JupyterNotebook. Your peer will load it and compare with basic solution. 
-Your code should contain the answers to all mandatory questions. Task ‘additional’ is on your own. 
+Save your code in Python JupyterNotebook. Your peer will load it and compare it to the basic solution. Your code should include answers to all mandatory questions. The additional task is up to you. 
 
 
 >Please leave feedback on the project in the [feedback form.](https://forms.yandex.ru/cloud/646b43a8eb61462a4d084f0a/) 

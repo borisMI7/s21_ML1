@@ -1,4 +1,4 @@
-  Machine Learning projects must use Python and the following libraries through JupyterLab to pass:
+  Machine learning projects must use Python and the following libraries to pass through JupyterLab:
 * pandas
 * numpy
 * sklearn
@@ -14,5 +14,5 @@
 * annoy
 * nmslib
 
-Before you can use JupyterLab and Jupyter Notebook, you must install the libraries yourself on your account using the pip install -r requirements.txt command. All libraries are installed through the browser console window with the jupyterlab command.
+Before you can use JupyterLab and Jupyter Notebook, you need to install the libraries yourself on your account using the pip install -r requirements.txt command. All libraries are installed from the browser console window using the jupyterlab command.
 
