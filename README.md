@@ -155,7 +155,7 @@ Follow the instructions, answer the questions and get your final score!
    4. Characteristics Analysis
       1. What is the type of column 'interest_level'? 
       2. Print the values in this column. How many entries does each value contain? 
-      3. Decode these values. For example, you can replace each value with 0, 1, or 2.
+      3. Encode these values. For example, you can replace each value with 0, 1, or 2.
       4. Plot histograms for the features 'bathrooms', 'bedrooms'. Are there any outliers?
    5. Complex analysis
       1. Plot a correlation matrix to understand the correlation between features and target. Plot a heat map for the correlation matrix. Is there a correlation? 
