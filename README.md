@@ -177,7 +177,7 @@ Follow the instructions, answer the questions and get your final score!
       4. Calculate RMSE (Root Mean Square Error) on training and test objectives.
       5. Insert your metrics into tables *result_MAE* and *result_RMSE* with model name 'linear_regression'.
    3. Decision Tree
-      1. Initialize decision tree regressor from sklearn with fixed random_state=42.
+      1. Initialize decision tree regressor from sklearn with fixed random_state=21.
       2. Fit it to train features and train target and make prediction on train and test features. Save it as a new column in data. 
       3. Compute MAE (Mean Absolute Error) on train and test targets.
       4. Compute RMSE (Root Mean Square Error) on train and test targets.
