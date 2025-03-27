@@ -167,7 +167,7 @@ Follow the instructions, answer the questions and get your final score!
    4. To use PolynomialFeatures, we first need to split the data into training and test samples. We have already done this for you, please read the training and test data. 
    5. Initialize PolynomialFeatures() with a degree of 10. 
    6. Apply PolynomialFeatures() to fit and transform your training and test data.
-5. Now you need to train 3 models: linear regression, decision tree and native model. We will use them as black boxes without deep understanding. 
+5. Now you need to train 3 models: linear regression, decision tree and naive model. We will use them as black boxes without deep understanding. 
    1. Results table 
       1. Create two empty Pandas DataFrames with columns 'model', 'train', 'test'. Let's call the first one result_MAE and the second one result_RMSE. We will fill these tables with the results of the models.
    2. Linear Regression 
@@ -182,11 +182,11 @@ Follow the instructions, answer the questions and get your final score!
       3. Compute MAE (Mean Absolute Error) on train and test targets.
       4. Compute RMSE (Root Mean Square Error) on train and test targets.
       5. Insert your metrics into tables *result_MAE* and *result_RMSE* with model name 'decision_tree'.
-   4. Native Models
+   4. Naive Models
       1. Calculate the mean and median of 'price' on the training and test data and create a column with these values. 
       2. Calculate the MAE on the training and test targets between your target and the calculated mean and median. 
       3. Calculate the RMSE on the training and test targets between your target and the calculated mean and median. 
-      4. Insert your metrics into tables result_MAE and result_RMSE with model names 'native_mean' and 'native_median'.
+      4. Insert your metrics into tables result_MAE and result_RMSE with model names 'naive_mean' and 'naive_median'.
    5. Compare the results 
       1. Print your final result_MAE and result_RMSE tables. 
       2. Which is the best model?
