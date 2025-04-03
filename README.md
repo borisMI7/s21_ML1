@@ -139,7 +139,7 @@ Follow the instructions, answer the questions and get your final score!
    4. Is an example case with house prices from the theory a classification of a regression problem? Is it possible to reduce the regression problem to classification?
 2. Introduction to Data Analysis
    1. Import the libraries **pandas**, **numpy**, **sklearn**, **lightgbm**, **scipy**, **statsmodels**, **matplotlib**, **seaborn**. Use **pip install** if necessary.
-   2. Load data from [kaggle](https://www.kaggle.com/competitions/two-sigma-connect-rental-listing-inquiries/data) using **pandas**. You only need table data and **train.json**.
+   2. Load data from [kaggle](https://www.kaggle.com/competitions/two-sigma-connect-rental-listing-inquiries/data) using **pandas**. You only need the table data, which is in **train.json**.
    3. What is the size of your data? 
    4. Print the list of columns. Which column is a target? 
    5. Make a quick analysis of the data: use the methods **info()**, **describe()**, **corr()**. Explain the results of the outputs. Are there any empty columns? 
